@@ -7,8 +7,10 @@ from io import StringIO
 import builtins
 
 def test_printlines():
-    when(builtins).open('myfile.txt').thenReturn(StringIO("Hello\nWorld!\n"))
-    when(builtins).print('Hello\n').thenReturn(None)
-    when(builtins).print('World!\n').thenReturn(None)
+    ## Mock open and print with the exact arguments we expect.
+    when(builtins).open('myfile.txt').thenReturn(StringIO("Hello,\nworld!\n"))
+    when(builtins).print('Hello,\n').thenReturn(None)
+    when(builtins).print('world!\n').thenReturn(None)
+    ## Call the function under test.
     assert printlines() == None
     unstub()
