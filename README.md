@@ -7,7 +7,7 @@ is one fundamental reason - we want our tests to pass when our code is correct, 
 it is not. We don't want tests that might sometimes fail for other reasons, such as a slow
 internet connection.
 
-Please remember that not all tests require mocks.
+Please remember that many tests will not require mocks.
 
 ## mocking-calls
 
