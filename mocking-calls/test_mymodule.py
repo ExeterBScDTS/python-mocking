@@ -1,5 +1,6 @@
 from mockito import when, unstub
 
+
 def test_myfunction():
 
     import myimport
@@ -9,6 +10,6 @@ def test_myfunction():
 
     import mymodule
 
-    assert mymodule.myfunction(1,2) == ['A','B']
+    assert mymodule.myfunction(1, 2) == ['A', 'B']
 
     unstub()

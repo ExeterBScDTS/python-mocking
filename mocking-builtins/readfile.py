@@ -5,6 +5,7 @@ def printlines():
         for line in myfile:
             print(line)
 
+
 if __name__ == "__main__":
     a = printlines()
     print(a)
